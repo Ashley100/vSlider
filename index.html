@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/semantic.min.css">
+    <link rel="stylesheet" href="./vSlider.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+
+    <div class="logo__wrap"><img src="./assets/other/logo.svg" alt=""> <p class="text green">Simple slider framework for simple projects. <span class="bold">8 KB</span></p></div>
+    <div class="inner-wrap">
+        <div class="container__wrap">
+
+
+
+            <div class="container__wrap__left">
+                
+                <div class="nav__wrap ui secondary vertical pointing menu">
+                    <a href="#settings" class="item active">Settings</a>
+                    <a href="#mouseControll" class="item">Mouse Controll</a>
+                    <a href="#items" class="item">Items count</a>
+                    <a href="#slideGroup" class="item">Slide Group</a>
+                    <a href="#marginRight" class="item">Margin Right</a>
+                    <a href="#loop" class="item">Set slider loop</a>
+                    <a href="#autoplay" class="item">Set autoplay</a>
+                    <a href="#delay" class="item">Autoplay delay</a>
+                    <a href="#navigation" class="item">Slider navigation</a>
+                </div>
+            </div>
+
+
+
+            <div class="container__wrap__right">
+                <div id="settings" class="settings__table">
+                    <div class="ui medium header">Table with properties and their description</div>
+                    <table class="ui celled table">
+                        <thead>
+                            <tr>
+                                <th>Properties</th>
+                                <th>Values</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>mouseControll</td>
+                                <td>type Boolean <span class="under">(true/false)</span></td>
+                                <td>Allows you to scroll through the slider with the mouse. <div class="default__value">The default value is <span class="under">true</span></div></td>
+                            </tr>
+                            <tr>
+                                <td>items</td>
+                                <td>type: Number</td>
+                                <td>You can specify the number of items for the visible area. <div class="default__value">The default value is <span class="under">1</span></div></td>
+                            </tr>
+                            <tr>
+                                <td>slideGroup</td>
+                                <td>type Boolean <span class="under">(true/false)</span></td>
+                                <td>This allows you to flip through the slider group. Each group gets the number of slides that you specify in the items
+                                property. <div class="default__value">The default value is <span class="under">false</span></div></td>
+                            </tr>
+                            <tr>
+                                <td>marginRight</td>
+                                <td>type: Number</td>
+                                <td>You can specify the distance between items (in pixels). <div class="default__value">The default value is <span class="under">0</span></div></td>
+                            </tr>
+                            <tr>
+                                <td>loop</td>
+                                <td>type Boolean <span class="under">(true/false)</span></td>
+                                <td>This property allows you to return to the first and last slide. <div class="default__value">The default value is <span class="under">false</span></div></td>
+                            </tr>
+                            <tr>
+                                <td>autoplay</td>
+                                <td>type Boolean <span class="under">(true/false)</span></td>
+                                <td>This property allows you to twist the slider automatically. <div class="default__value">The default value is <span class="under">3000</span> (milliseconds = 3 seconds)</div></td>
+                            </tr>
+                            <tr>
+                                <td>delay</td>
+                                <td>type: Number</td>
+                                <td>This property allows you to set the speed of automatic scrolling. <div class="default__value">The default value is <span class="under">3000</span> (milliseconds = 3 seconds)</div></td>
+                            </tr>
+                            <tr>
+                                <td>navigation</td>
+                                <td>type: Object</td>
+                                <td>Contains two properties. <br>
+                                    First: <div class="default__value">prev: ".className of element that calls scroll to the left"</div><br>
+                                    Second: <div class="default__value">next: ".className of element that calls scroll to the right"</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <!-- default -->
+                <div id="default" class="mySlider-wrap">
+                    <div class="v__navigation__wrap">
+                        <div class="ui medium header">Default slider with simple settings</div>
+                    </div>
+
+                    <div class="v__slider__container vSlide1">
+                        <div class="v__slider__wrapper">
+                            <div class="v__slide">1</div>
+                            <div class="v__slide">2</div>
+                            <div class="v__slide">3</div>
+                            <div class="v__slide">4</div>
+                            <div class="v__slide">5</div>
+                            <div class="v__slide">6</div>
+                            <div class="v__slide">7</div>
+                            <div class="v__slide">8</div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="code">
+                            <p class="ui purple "><a class="ui green-bg label">var mySlider = new vSlider (".sliderClassName", {});</a></p>
+                        </code>
+                    </pre>
+                </div>
+
+                <!-- mouseControll -->
+                <div id="mouseControll" class="mySlider-wrap">
+                    <div class="v__navigation__wrap">
+                        <div class="ui medium header">Slider with <div class="default__value">mouseControll: </div> property</div>
+                    </div>
+                
+                    <div class="v__slider__container vSlide2">
+                        <div class="v__slider__wrapper">
+                            <div class="v__slide">1</div>
+                            <div class="v__slide">2</div>
+                            <div class="v__slide">3</div>
+                            <div class="v__slide">4</div>
+                            <div class="v__slide">5</div>
+                            <div class="v__slide">6</div>
+                            <div class="v__slide">7</div>
+                            <div class="v__slide">8</div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="code">
+                            <p class="ui purple "><a class="ui green-bg label">var mySlider = new vSlider (".sliderClassName", { <br><br>&nbsp; &nbsp; mouseControll: false, <br><br>});</a></p>
+                        </code>
+                    </pre>
+                </div>
+
+                <!-- items -->
+                <div id="items" class="mySlider-wrap">
+                    <div class="v__navigation__wrap">
+                        <div class="ui medium header">Slider with <div class="default__value">items: </div> property</div>
+                    </div>
+                
+                    <div class="v__slider__container vSlide3">
+                        <div class="v__slider__wrapper">
+                            <div class="v__slide">1</div>
+                            <div class="v__slide">2</div>
+                            <div class="v__slide">3</div>
+                            <div class="v__slide">4</div>
+                            <div class="v__slide">5</div>
+                            <div class="v__slide">6</div>
+                            <div class="v__slide">7</div>
+                            <div class="v__slide">8</div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="code">
+                            <p class="ui purple "><a class="ui green-bg label">var mySlider = new vSlider (".sliderClassName", { <br><br>&nbsp; &nbsp; items: 3 <br><br>});</a></p>
+                        </code>
+                    </pre>
+                </div>
+
+                <!-- slideGroup -->
+                <div id="slideGroup" class="mySlider-wrap">
+                    <div class="v__navigation__wrap">
+                        <div class="ui medium header">Slider with <div class="default__value">slideGroup: </div> property</div>
+                    </div>
+                
+                    <div class="v__slider__container vSlide4">
+                        <div class="v__slider__wrapper">
+                            <div class="v__slide">1</div>
+                            <div class="v__slide">2</div>
+                            <div class="v__slide">3</div>
+                            <div class="v__slide">4</div>
+                            <div class="v__slide">5</div>
+                            <div class="v__slide">6</div>
+                            <div class="v__slide">7</div>
+                            <div class="v__slide">8</div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="code">
+                            <p class="ui purple "><a class="ui green-bg label">var mySlider = new vSlider (".sliderClassName", { <br><br>&nbsp; &nbsp; items: 4, <br><br>&nbsp; &nbsp; slideGroup: true <br><br>});</a></p>
+                        </code>
+                    </pre>
+                </div>
+
+                <!-- marginRight -->
+                <div id="marginRight" class="mySlider-wrap">
+                    <div class="v__navigation__wrap">
+                        <div class="ui medium header">Slider with <div class="default__value">marginRight: </div> property</div>
+                    </div>
+                
+                    <div class="v__slider__container vSlide5">
+                        <div class="v__slider__wrapper">
+                            <div class="v__slide">1</div>
+                            <div class="v__slide">2</div>
+                            <div class="v__slide">3</div>
+                            <div class="v__slide">4</div>
+                            <div class="v__slide">5</div>
+                            <div class="v__slide">6</div>
+                            <div class="v__slide">7</div>
+                            <div class="v__slide">8</div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="code">
+                            <p class="ui purple "><a class="ui green-bg label">var mySlider = new vSlider (".sliderClassName", { <br><br>&nbsp; &nbsp; items: 2, <br><br>&nbsp; &nbsp; marginRight: 24 <br><br>});</a></p>
+                        </code>
+                    </pre>
+                </div>
+
+                <!-- loop -->
+                <div id="loop" class="mySlider-wrap">
+                    <div class="v__navigation__wrap">
+                        <div class="ui medium header">Slider with <div class="default__value">loop: </div> property</div>
+                    </div>
+                
+                    <div class="v__slider__container vSlide6">
+                        <div class="v__slider__wrapper">
+                            <div class="v__slide">1</div>
+                            <div class="v__slide">2</div>
+                            <div class="v__slide">3</div>
+                            <div class="v__slide">4</div>
+                            <div class="v__slide">5</div>
+                            <div class="v__slide">6</div>
+                            <div class="v__slide">7</div>
+                            <div class="v__slide">8</div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="code">
+                            <p class="ui purple "><a class="ui green-bg label">var mySlider = new vSlider (".sliderClassName", { <br><br>&nbsp; &nbsp; items: 2, <br><br>&nbsp; &nbsp; loop: true <br><br>});</a></p>
+                        </code>
+                    </pre>
+                </div>
+
+                <!-- autoplay -->
+                <div id="autoplay" class="mySlider-wrap">
+                    <div class="v__navigation__wrap">
+                        <div class="ui medium header">Slider with <div class="default__value">autoplay: </div> property</div>
+                    </div>
+                
+                    <div class="v__slider__container vSlide7">
+                        <div class="v__slider__wrapper">
+                            <div class="v__slide">1</div>
+                            <div class="v__slide">2</div>
+                            <div class="v__slide">3</div>
+                            <div class="v__slide">4</div>
+                            <div class="v__slide">5</div>
+                            <div class="v__slide">6</div>
+                            <div class="v__slide">7</div>
+                            <div class="v__slide">8</div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="code">
+                            <p class="ui purple "><a class="ui green-bg label">var mySlider = new vSlider (".sliderClassName", { <br><br>&nbsp; &nbsp; items: 3, <br><br>&nbsp; &nbsp; autoplay: true,<br><br>&nbsp; &nbsp; loop: true <br><br>});</a></p>
+                        </code>
+                    </pre>
+                </div>
+
+                <!-- delay -->
+                <div id="delay" class="mySlider-wrap">
+                    <div class="v__navigation__wrap">
+                        <div class="ui medium header">Slider with <div class="default__value">delay: </div> property</div>
+                    </div>
+                
+                    <div class="v__slider__container vSlide8">
+                        <div class="v__slider__wrapper">
+                            <div class="v__slide">1</div>
+                            <div class="v__slide">2</div>
+                            <div class="v__slide">3</div>
+                            <div class="v__slide">4</div>
+                            <div class="v__slide">5</div>
+                            <div class="v__slide">6</div>
+                            <div class="v__slide">7</div>
+                            <div class="v__slide">8</div>
+                            <div class="v__slide">9</div>
+                            <div class="v__slide">10</div>
+                            <div class="v__slide">11</div>
+                            <div class="v__slide">12</div>
+                            <div class="v__slide">13</div>
+                            <div class="v__slide">14</div>
+                            <div class="v__slide">15</div>
+                            <div class="v__slide">16</div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="code">
+                            <p class="ui purple "><a class="ui green-bg label">var mySlider = new vSlider (".sliderClassName", { <br><br>&nbsp; &nbsp; items: 4, <br><br>&nbsp; &nbsp; autoplay: true,<br><br>&nbsp; &nbsp; loop: true, <br><br>&nbsp; &nbsp; delay: 1000, // 1000 = 1 second <br><br>});</a></p>
+                        </code>
+                    </pre>
+                </div>
+
+                <!-- navigation -->
+                <div id="navigation" class="mySlider-wrap">
+                    <div class="v__navigation__wrap">
+                        <div class="ui medium header">Slider with <div class="default__value">navigation: </div> property</div>
+
+                        <div class="arrow-wrap">
+                            <div class="arrow arrow--left my__prev-btn"></div>
+                            <div class="arrow arrow--right my__next-btn"></div>
+                        </div>
+                    </div>
+                
+                    <div class="v__slider__container vSlide9">
+                        <div class="v__slider__wrapper">
+                            <div class="v__slide">1</div>
+                            <div class="v__slide">2</div>
+                            <div class="v__slide">3</div>
+                            <div class="v__slide">4</div>
+                            <div class="v__slide">5</div>
+                            <div class="v__slide">6</div>
+                            <div class="v__slide">7</div>
+                            <div class="v__slide">8</div>
+                        </div>
+                    </div>
+
+                    <pre>
+                        <code class="code">
+                            <p class="ui purple "><a class="ui green-bg label">var mySlider = new vSlider (".sliderClassName", { <br><br>&nbsp; &nbsp; items: 1, <br><br> &nbsp; &nbsp;navigation: {<br>&nbsp; &nbsp;&nbsp; &nbsp;prev: ".my__prev-btn",<br>&nbsp; &nbsp;&nbsp; &nbsp;next: ".my__next-btn"<br>&nbsp; &nbsp;}<br><br>});</a></p>
+                        </code>
+                    </pre>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="./vSlider.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+
+    <script>
+        // var vS1 = new vSlider('.vSlide1', {
+        //     // autoplay: true,
+        //     // delay: 1000,
+        //     // loop: true,
+        //     // items: 2,
+                // mouseControll: false,
+        //     // marginRight: 24,
+        //     // slideGroup: true,
+        //     navigation: {
+        //         prev: '.nav__prev1',
+        //         next: '.nav__next1'
+        //     }
+        // });
+        // console.log(vS1);
+
+        // var vS2 = new vSlider('.vSlide2', {
+        //     autoplay: true,
+        //     delay: 1000,
+        //     loop: false,
+        //     items: 3,
+        //     // marginRight: 10,
+        //     // slideGroup: true,
+        //     navigation: {
+        //         prev: '.nav__prev2',
+        //         next: '.nav__next2'
+        //     }
+        // });
+
+        var exapleSiders = {};
+        function createSlider ( index, className, options ) {
+            exapleSiders[index] = new vSlider(className, options);
+        }
+
+        // Simple slider
+        createSlider(1, '.vSlide1', {});
+
+        // Slider - items
+        createSlider(2, '.vSlide2', { mouseControll: false });
+
+        // Slider - marginRight
+        createSlider(3, '.vSlide3', { items: 3 });
+
+        // Slider - slideGroup
+        createSlider(4, '.vSlide4', { items: 4, slideGroup: true });
+        
+        // Slider - marginRight
+        createSlider(5, '.vSlide5', { items: 2, marginRight: 24 });
+
+        // Slider - loop
+        createSlider(6, '.vSlide6', { items: 2, loop: true });
+
+        // Slider - autoplay
+        createSlider(7, '.vSlide7', { items: 3, autoplay: true, loop: true });
+
+        // Slider - delay
+        createSlider(8, '.vSlide8', { items: 4, autoplay: true, loop: true, delay: 1000 });
+
+        // Slider - navigation
+        createSlider(9, '.vSlide9', { 
+            items: 2,
+            navigation: {
+                prev: '.my__prev-btn',
+                next: '.my__next-btn'
+            }
+        });
+
+    </script>
+</body>
+</html>
